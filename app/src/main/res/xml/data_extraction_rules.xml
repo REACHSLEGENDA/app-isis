@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Archivo de reglas para data extraction en Android 12+.
+    - Permite definir qué datos pueden incluirse en backups en la nube
+      y qué datos se pueden transferir entre dispositivos.
+    - Es parte del nuevo sistema de backup y restore en Android 12+.
+    Más info:
+    https://developer.android.com/about/versions/12/backup-restore#xml-changes
+-->
+
+<data-extraction-rules>
+    <!-- Contenedor raíz para todas las reglas de extracción de datos -->
+
+    <cloud-backup>
+        <!-- Reglas para definir qué datos se respaldan en la nube.
+             Usa <include> o <exclude> para definir rutas o dominios específicos. -->
+
+        <!-- Ejemplo:
+        <include domain="sharedpref" path="."/>
+        <exclude domain="database" path="sensitive.db"/>
+        -->
+    </cloud-backup>
+
+    <!-- Opcional: reglas específicas para transferencias de datos entre dispositivos
+         durante configuraciones iniciales o migraciones. -->
+    <!--
+    <device-transfer>
+        <include domain="files" path="user_data/"/>
+        <exclude domain="sharedpref" path="private_prefs.xml"/>
+    </device-transfer>
+    -->
+</data-extraction-rules>

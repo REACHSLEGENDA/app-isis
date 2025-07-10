@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Archivo de colores en Android. Define colores reutilizables en la app. -->
+
+<resources>
+    <!-- Color púrpura claro (tono 200) en formato ARGB (#AARRGGBB) -->
+    <color name="purple_200">#FFBB86FC</color>
+
+    <!-- Color púrpura intermedio (tono 500), usado frecuentemente como color primario -->
+    <color name="purple_500">#FF6200EE</color>
+
+    <!-- Color púrpura oscuro (tono 700), usado frecuentemente para variantes oscuras -->
+    <color name="purple_700">#FF3700B3</color>
+
+    <!-- Color teal claro (tono 200), a veces usado como color secundario -->
+    <color name="teal_200">#FF03DAC5</color>
+
+    <!-- Color teal oscuro (tono 700) -->
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Color negro sólido -->
+    <color name="black">#FF000000</color>
+
+    <!-- Color blanco sólido -->
+    <color name="white">#FFFFFFFF</color>
+</resources>

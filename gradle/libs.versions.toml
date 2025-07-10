@@ -1,0 +1,86 @@
+[versions]
+# Sección donde defines las versiones de librerías y plugins
+
+agp = "8.10.1"
+# Versión de Android Gradle Plugin (AGP)
+
+kotlin = "2.0.21"
+# Versión de Kotlin (para compilación y plugins)
+
+coreKtx = "1.16.0"
+# Versión de androidx.core:core-ktx
+
+junit = "4.13.2"
+# Versión de JUnit para pruebas unitarias JVM
+
+junitVersion = "1.2.1"
+# Versión de AndroidX JUnit Extension
+
+espressoCore = "3.6.1"
+# Versión de Espresso para pruebas UI instrumentadas
+
+lifecycleRuntimeKtx = "2.9.1"
+# Versión de androidx.lifecycle:lifecycle-runtime-ktx
+
+activityCompose = "1.10.1"
+# Versión de androidx.activity:activity-compose
+
+composeBom = "2024.09.00"
+# Versión del BOM de Jetpack Compose para mantener dependencias sincronizadas
+
+[libraries]
+# Definición de librerías (group, name y versión) reutilizables en Gradle
+
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+# Core KTX → extensiones Kotlin para Android
+
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+# JUnit clásico para pruebas unitarias JVM
+
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+# AndroidX JUnit Extensions → permite usar JUnit en pruebas instrumentadas Android
+
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+# Espresso → testing de UI en Android
+
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+# Lifecycle KTX → facilita manejar ciclos de vida en Kotlin
+
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+# Integración entre Jetpack Compose y componentes Activity
+
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+# BOM de Jetpack Compose → mantiene versiones coherentes entre dependencias Compose
+
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+# Core UI de Jetpack Compose (sin versión → la define el BOM si usas plataforma)
+
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+# Librería de gráficos y dibujo en Compose
+
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+# Herramientas de preview y diseño en Compose
+
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+# Permite previsualizar composables en Android Studio
+
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+# Para test de UI en Compose (configuración de manifest)
+
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+# Testing de Compose UI con JUnit4
+
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+# Material 3 para Jetpack Compose
+
+[plugins]
+# Definición de plugins para Gradle
+
+android-application = { id = "com.android.application", version.ref = "agp" }
+# Plugin de Android para aplicaciones (AGP)
+
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+# Plugin Kotlin para proyectos Android
+
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# Plugin Kotlin Compose para habilitar Compose en Kotlin

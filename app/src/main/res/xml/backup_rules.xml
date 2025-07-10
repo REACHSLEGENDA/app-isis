@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Archivo de reglas para Auto Backup en Android.
+    - Permite indicar qué datos incluir o excluir en las copias de seguridad automáticas.
+    - Funciona a partir de API 31 (Android 12) en adelante.
+    Más info:
+    https://developer.android.com/guide/topics/data/autobackup
+    https://developer.android.com/about/versions/12/backup-restore
+-->
+
+<full-backup-content>
+    <!-- Contenedor raíz para definir reglas de backup -->
+
+    <!-- Ejemplo para incluir todos los archivos de shared preferences:
+    <include domain="sharedpref" path="."/>
+    -->
+
+    <!-- Ejemplo para excluir un archivo específico de shared preferences:
+    <exclude domain="sharedpref" path="device.xml"/>
+    -->
+
+    <!--
+        Dominios disponibles:
+        - sharedpref → SharedPreferences
+        - database → Bases de datos
+        - files → Archivos internos
+        - external → Archivos externos
+        - root → Todo el almacenamiento interno de la app
+    -->
+</full-backup-content>

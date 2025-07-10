@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Declaración de que este es un archivo XML y está codificado en UTF-8 -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Raíz del archivo Manifest.
+        - xmlns:android declara el espacio de nombres para atributos Android
+        - xmlns:tools se usa para herramientas como Lint o editores XML
+    -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CarritoApp"
+        tools:targetApi="31">
+
+        <!--
+            Configuración general de la app:
+            - allowBackup: permite copias de seguridad automáticas de datos.
+            - dataExtractionRules: reglas sobre qué datos extraer (Android 12+).
+            - fullBackupContent: qué incluir/excluir en backups completos.
+            - icon / roundIcon: iconos de la app.
+            - label: nombre visible de la app.
+            - supportsRtl: permite soporte para idiomas RTL (ej. árabe).
+            - theme: tema visual global de la app.
+            - tools:targetApi: indica a herramientas que se apunta a API 31.
+        -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.CarritoApp">
+
+            <!--
+                Configuración de la actividad principal:
+                - name: clase de la actividad (ruta relativa al paquete base).
+                - exported: indica si otras apps pueden lanzar esta actividad.
+                - label: título de la actividad.
+                - theme: tema visual para esta actividad.
+            -->
+
+            <intent-filter>
+                <!--
+                    Define qué intenciones puede recibir esta actividad.
+                    MAIN + LAUNCHER hacen que esta sea la pantalla inicial.
+                -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

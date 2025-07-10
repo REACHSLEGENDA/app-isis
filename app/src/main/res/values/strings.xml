@@ -1,0 +1,9 @@
+<resources>
+    <!-- Contenedor raíz para definir todos los recursos de texto en Android -->
+
+    <string name="app_name">CarritoApp</string>
+    <!-- Texto que representa el nombre de la aplicación.
+         Se usa, por ejemplo, en AndroidManifest.xml como label de la app.
+         Es buena práctica colocar textos aquí para soportar múltiples idiomas. -->
+
+</resources>

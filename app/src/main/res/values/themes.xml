@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Declaración de que el archivo es XML y está en UTF-8 -->
+
+<resources>
+    <!-- Contenedor raíz para definir recursos (en este caso, estilos y temas) -->
+
+    <style
+        name="Theme.CarritoApp"
+        parent="android:Theme.Material.Light.NoActionBar" />
+    <!--
+        Define un estilo llamado Theme.CarritoApp
+        - parent: indica que este tema hereda de Theme.Material.Light.NoActionBar
+          (tema claro de Material Design sin Action Bar).
+        Puedes sobrescribir colores, tipografías, etc. aquí mismo si lo deseas.
+    -->
+
+</resources>
